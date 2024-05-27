@@ -1,0 +1,42 @@
+html {
+    background-color: darkkhaki;
+    box-sizing: border-box;
+    font-family:Verdana, "Geneva", Tahoma, sans-serif;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-size: 1.6rem;
+}
+
+#container {
+    align-items: center;
+    background-color:steelblue;
+    border: 5px solid darkslategray;
+    border-radius: 25%;
+    box-shadow: 5px 5px 5px 5px black;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2%;
+    height: 90vh;
+    justify-content: center;
+    margin: 0 auto;
+    width: 95vw;
+}
+
+.boxes {
+    align-items: center;
+    background-color:cornsilk;
+    border: 5px solid darkslategray;
+    border-radius: 25%;
+    box-shadow: 5px 5px 5px 5px black;
+    color:teal;
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+}

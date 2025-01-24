@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+    </style>
     <title>CSS Custom Properties</title>
 </head>
 <body>
@@ -17,6 +20,22 @@
         <div id="box7" class="boxes">I'm a box!</div>
         <div id="box8" class="boxes">I'm a box!</div>
         <div id="box9" class="boxes">I'm a box!</div>
+        <div id="box10" class="boxes">I'm a box!</div>
+        <div id="box11" class="boxes">I'm a box!</div>
+        <div id="box12" class="boxes">I'm a box!</div>
     </div>
+    <script>
+        'use strict';
+
+        function clickHandler(id) {
+            let clickedBox = document.getElementById(id);
+            clickedBox.className === 'boxes clicked' ? clickedBox.className = 'boxes' : clickedBox.className = 'boxes clicked';
+            clickedBox.textContent === `I've been clicked!` ? clickedBox.textContent = `I'm a box!` : clickedBox.textContent = `I've been clicked!`;
+            console.log(clickedBox);
+        }
+        
+        let boxes = Array.from(document.querySelectorAll('.boxes'));
+        boxes.forEach(box => box.addEventListener('click', () => clickHandler(box.id)));
+    </script>
 </body>
 </html>

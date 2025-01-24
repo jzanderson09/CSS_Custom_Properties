@@ -1,14 +1,24 @@
 :root {
+    --box-background-color: cornsilk;
     --box-border-round: 5%;
     --box-border-shadow: 5px 5px 5px 5px black;
     --box-border-style: 5px solid darkslategray;
+    --box-clicked-background-color: #e110f01f;
+    --box-clicked-border-color: whitesmoke;
+    --box-clicked-font-color: whitesmoke;
+    --box-font-color: rgb(0, 68, 128);
+    --container-background-color: #4682b4;
+    --main-background-color: aquamarine;
 }
 
 html {
-    background-color: aquamarine;
+    background-color: var(--main-background-color);
     box-sizing: border-box;
-    font-family:Verdana, "Geneva", Tahoma, sans-serif;
+    font-family: "Lexend Giga", serif;
+    font-optical-sizing: auto;
     font-size: 62.5%;
+    font-style: normal;
+    font-weight: bold;
 }
 
 *,
@@ -20,7 +30,7 @@ html {
 
 #container {
     align-items: center;
-    background-color:steelblue;
+    background-color: var(--container-background-color);
     border: var(--box-border-style, 5px solid black);
     border-radius: var(--box-border-round, 25%);
     box-shadow: var(--box-border-shadow, 2px 2px 2px 2px red);
@@ -35,14 +45,25 @@ html {
 
 .boxes {
     align-items: center;
-    background-color:cornsilk;
+    background-color:var(--box-background-color);
     border: var(--box-border-style, 5px solid black);
     border-radius: var(--box-border-round, 25%);
     box-shadow: var(--box-border-shadow, 2px 2px 2px 2px red);
-    color:teal;
+    color: var(--box-font-color);
     display: flex;
     height: 20%;
     justify-content: center;
     text-align: center;
     width: 20%;
+}
+
+.boxes:active {
+    opacity: .5;
+    transform: translateY(5%);
+}
+
+.clicked {
+    background-color: var(--box-clicked-background-color);
+    border-color: var(--box-clicked-border-color);
+    color: var(--box-clicked-font-color);
 }
